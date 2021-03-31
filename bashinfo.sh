@@ -59,8 +59,9 @@ printf "\n"
 # 6.3.2 Is this Shell Interactive?
 printf "<----------------------------------->\n"
 printf " Is this shell an: Interactive Shell?\n"
-printf "<----------------------------------->\n"
+printf "<----------------------------------->\n\n"
 dbgvar PS1
+printf "\n"
 if [ -z "$PS1" ]; then
   printf "This shell is not interactive.\n"
 else
@@ -72,6 +73,6 @@ printf "\n"
 printf "<--------------------------------->\n"
 printf " Is this shell a: Login Shell?\n"
 printf " ('on' means yes. 'off' means no.)\n"
-printf "<--------------------------------->\n"
+printf "<--------------------------------->\n\n"
 dbgopt login_shell
 printf "\n"
