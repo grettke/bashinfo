@@ -57,9 +57,9 @@ dbgopt compat44
 printf "\n"
 
 # 6.3.2 Is this Shell Interactive?
-printf "<----------------------------------->\n"
+printf "<------------------------------------>\n"
 printf " Is this shell an: Interactive Shell?\n"
-printf "<----------------------------------->\n\n"
+printf "<------------------------------------>\n\n"
 dbgvar PS1
 printf "\n"
 if [ -z "$PS1" ]; then
