@@ -60,19 +60,20 @@ printf "\n"
 printf "<------------------------------------>\n"
 printf " Is this shell an: Interactive Shell?\n"
 printf "<------------------------------------>\n\n"
-dbgvar PS1
-printf "\n"
 if [ -z "$PS1" ]; then
-  printf "This shell is not interactive.\n"
+  printf "This shell is *not* interactive.\n"
 else
-  printf "This shell is interactive.\n"
+  printf "This shell *is* interactive.\n"
 fi
 printf "\n"
 
 # 4.3.2 The Shopt Builtin
 printf "<--------------------------------->\n"
 printf " Is this shell a: Login Shell?\n"
-printf " ('on' means yes. 'off' means no.)\n"
 printf "<--------------------------------->\n\n"
-dbgopt login_shell
+if shopt login_shell | grep "on"; then
+  printf "This *is* a login shell.\n"
+else
+  printf "This is *not* a login shell.\n"
+fi
 printf "\n"
